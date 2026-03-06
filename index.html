@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Showcase</title>
 
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#0f0f0f;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+header p{
+    color:#aaa;
+    max-width:600px;
+    margin:auto;
+}
+
+/* CAROUSEL */
+
+.carousel-container{
+    width:100%;
+    overflow:hidden;
+    padding:40px 0;
+}
+
+.carousel{
+    display:flex;
+    gap:30px;
+    padding-left:40px;
+    animation: scroll 15s linear infinite;
+}
+
+.movie-card{
+    min-width:300px;
+    height:450px;
+    border-radius:12px;
+    overflow:hidden;
+    position:relative;
+    transition:transform .3s;
+}
+
+.movie-card:hover{
+    transform:scale(1.05);
+}
+
+.movie-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* movie info */
+
+.movie-info{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:15px;
+    background:linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.movie-info h3{
+    margin:0;
+}
+
+/* animation */
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎬 Movie Showcase</h1>
+<p>Discover legendary movies and TV shows that changed entertainment forever.</p>
+</header>
+
+<section class="carousel-container">
+
+<div class="carousel">
+
+<!-- Movie 1 -->
+
+<div class="movie-card">
+<img src="https://i.ibb.co/pvf94V84/Breakng-bad.jpg">
+<div class="movie-info">
+<h3>Breaking Bad</h3>
+<p>A chemistry teacher becomes a drug kingpin.</p>
+</div>
+</div>
+
+<!-- Movie 2 -->
+
+<div class="movie-card">
+<img src="https://i.ibb.co/XryB4v2K/fightl-club.jpg">
+<div class="movie-info">
+<h3>Fight Club</h3>
+<p>An underground fight club becomes a revolution.</p>
+</div>
+</div>
+
+<!-- Duplicate for infinite scroll -->
+
+<div class="movie-card">
+<img src="https://i.ibb.co/pvf94V84/Breakng-bad.jpg">
+<div class="movie-info">
+<h3>Breaking Bad</h3>
+<p>A chemistry teacher becomes a drug kingpin.</p>
+</div>
+</div>
+
+<div class="movie-card">
+<img src="https://i.ibb.co/XryB4v2K/fightl-club.jpg">
+<div class="movie-info">
+<h3>Fight Club</h3>
+<p>An underground fight club becomes a revolution.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Movie Website
+</footer>
+
+</body>
+</html>
